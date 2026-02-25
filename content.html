@@ -1,0 +1,31 @@
+<h2>Case A: not True</h2>
+
+<p>The <code class="language-python">not</code> operator reverses the boolean value, so <code class="language-python">not True</code> returns <code class="language-python">False</code>.</p>
+
+<py-cell>print(not True)</py-cell>
+
+<h2>Case B: or with comparison and in</h2>
+
+<p>This evaluates to <code class="language-python">(3 > 4) or (1 in [1, 2])</code>. The first part is <code class="language-python">False</code> (3 is not greater than 4), and the second part is <code class="language-python">True</code> (1 is in the list). Since we have <code class="language-python">False or True</code>, the result is <code class="language-python">True</code>.</p>
+
+<py-cell>print(3 > 4 or 1 in [1, 2])</py-cell>
+
+<h2>Case C: Modulo and not-equal with and</h2>
+
+<p>This evaluates to <code class="language-python">(10 % 2 == 0) and (5 != 6)</code>. The modulo <code class="language-python">10 % 2</code> equals 0 (10 is even), so the first part is <code class="language-python">True</code>. The second part, <code class="language-python">5 != 6</code>, is also <code class="language-python">True</code>. Since both are true, <code class="language-python">and</code> returns <code class="language-python">True</code>.</p>
+
+<py-cell>print(10 % 2 == 0 and 5 != 6)</py-cell>
+
+<h2>Case D: Multiplication, comparison, indexing, and and</h2>
+
+<p>This evaluates to <code class="language-python">(5 * 2 > 8) and (list1[1] == 1)</code>. The first part, <code class="language-python">5 * 2 > 8</code>, is <code class="language-python">10 > 8</code>, which is <code class="language-python">True</code>. The second part, <code class="language-python">list1[1]</code>, accesses the second element of the list (which is 2), so we have <code class="language-python">2 == 1</code>, which is <code class="language-python">False</code>. Since we have <code class="language-python">True and False</code>, the result is <code class="language-python">False</code>.</p>
+
+<py-cell>list1 = [1, 2]
+print(5 * 2 > 8 and list1[1] == 1)</py-cell>
+
+<h2>Case E: String membership and modulo with or</h2>
+
+<p>This evaluates to <code class="language-python">("world" in string1) or (10 % 3 == 0)</code>. The first part, <code class="language-python">"world" in string1</code>, checks if the substring "world" is in <code class="language-python">string1</code>. Since <code class="language-python">string1</code> is "Hello World" (with a capital W), and Python is case-sensitive, <code class="language-python">"world"</code> is <b>not</b> found, so this part is <code class="language-python">False</code>. The second part, <code class="language-python">10 % 3 == 0</code>, checks if the remainder when 10 is divided by 3 is 0. <code class="language-python">10 % 3</code> is 1, so this is also <code class="language-python">False</code>. Since both sides are <code class="language-python">False</code>, the result is <code class="language-python">False</code>.</p>
+
+<py-cell>string1 = "Hello World"
+print("world" in string1 or 10 % 3 == 0)</py-cell>
